@@ -1,0 +1,27 @@
+{
+  "name": "dart-resource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "dev": "npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Massen Elarabi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "validator": "^13.11.0"
+  }
+}
