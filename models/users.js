@@ -22,6 +22,10 @@ const UserSchema = Schema(
             password: {
                   type: String,
                   required: true
+            },
+            phoneNumber: {
+                  type: String,
+                  required: true
             }
       },
       {
