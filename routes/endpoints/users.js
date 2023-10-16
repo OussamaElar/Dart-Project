@@ -67,7 +67,8 @@ router.post("/register", ( req, res ) => {
                         email: req.body.email,
                         firstName: req.body.firstName,
                         lastName: req.body.lastName,
-                        password: req.body.lastName
+                        password: req.body.lastName,
+                        phoneNumber: req.body.phoneNumber
                   });
                   bcrypt.genSalt(10, (err, salt) => {
                         bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -76,7 +77,12 @@ router.post("/register", ( req, res ) => {
                               newUser
                                     .save()
                                     .then((user) => {
-                                          const payload = { id: user.id, email: user.email, userName: user.userName };
+                                          const payload = {
+                                                id: user.id,
+                                                email: user.email,
+                                                userName: user.userName,
+                                                phoneNumber: user.phoneNumber
+                                          };
                                           jwt.sign(
                                                 payload,
                                                 keys.secretOrKey,
